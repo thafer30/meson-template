@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  meson:
+    build:
+      context: ./config/meson
+      dockerfile: Dockerfile
+    volumes:
+      - ./data/meson/:/opt/app/
+
+    tty: true
+    working_dir: /opt/app/
+
+  cmake:
+    build:
+      context: ./config/cmake
+      dockerfile: Dockerfile
+    volumes:
+      - ./data/cmake/:/opt/app/
+
+    tty: true
+    working_dir: /opt/app/

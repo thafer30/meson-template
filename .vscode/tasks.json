@@ -1,0 +1,131 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    // {
+    //   "label": "(Meson) Setup Container",
+    //   "type": "shell",
+    //   "command": "docker compose build",
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Setup Meson",
+    //   "type": "shell",
+    //   "command": "docker compose run --rm meson sh -c \"cd /opt/app/ && meson build-gcc\"",
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Setup",
+    //   "dependsOrder": "sequence",
+    //   "dependsOn": [
+    //     "(Meson) Setup Container",
+    //     "(Meson) Setup Meson",
+    //   ],
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Clean",
+    //   "type": "shell",
+    //   "command": "docker compose run --rm meson sh -c \"cd /opt/app/build-gcc/ && /usr/bin/ninja clean\"",
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Build",
+    //   "type": "shell",
+    //   "command": "docker compose run --rm meson sh -c \"cd /opt/app/build-gcc/ && /usr/bin/ninja\"",
+    //   "problemMatcher": {
+    //     "owner": "cpp",
+    //     "fileLocation": [
+    //       "autodetect",
+    //       "${workspaceFolder}/data/meson/src"
+    //     ],
+    //     "pattern": {
+    //       "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+    //       "file": 1,
+    //       "line": 2,
+    //       "column": 3,
+    //       "severity": 4,
+    //       "message": 5
+    //     },
+    //   },
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Run",
+    //   "type": "shell",
+    //   "command": "docker compose run --rm meson sh -c \"cd /opt/app/build-gcc/ && /opt/app/build-gcc/main.out\"",
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Callgrind",
+    //   "type": "shell",
+    //   "command": "docker compose run --rm meson sh -c \"cd /opt/app/build-gcc/ && valgrind --tool=callgrind --dump-instr=yes /opt/app/build-gcc/main.out\"",
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Leak test",
+    //   "type": "shell",
+    //   "command": "docker compose run --rm meson sh -c \"cd /opt/app/build-gcc/ && valgrind -s --leak-check=full --show-leak-kinds=all /opt/app/build-gcc/main.out\"",
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Leak test (debug)",
+    //   "type": "shell",
+    //   "command": "docker compose run --rm meson sh -c \"cd /opt/app/build-gcc/ && valgrind -v -d -s --leak-check=full --show-leak-kinds=all /opt/app/build-gcc/main.out\"",
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Build and run",
+    //   "dependsOrder": "sequence",
+    //   "dependsOn": [
+    //     "(Meson) Build",
+    //     "(Meson) Run"
+    //   ],
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+    // {
+    //   "label": "(Meson) Clean, build, and run",
+    //   "dependsOrder": "sequence",
+    //   "dependsOn": [
+    //     "(Meson) Clean",
+    //     "(Meson) Build",
+    //     "(Meson) Run"
+    //   ],
+    //   "group": {
+    //     "kind": "build",
+    //     // "isDefault": true,
+    //   }
+    // },
+  ],
+}

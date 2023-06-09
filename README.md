@@ -22,7 +22,7 @@ Clone this repo and change the remote URL of this repo to point to your target
 remote:
 
 ```shell
-git clone https://github.com/weskoerber/cmake-template
+git clone https://github.com/thafer30/meson-template
 git remote set-url origin <new_url>
 ```
 
@@ -92,3 +92,11 @@ live here.
 
 The code for the sample library lives here. Implementations and private headers
 for the `hello` library live here.
+
+## Discussion Topics
+
+Upon setting up the docker and meson functionality I came across a souple things we should decide on:
+
+- Standard for naming include directories and what goes in them
+  - Is include directory for external depencies? (E.G. git submodules)
+  - Is include directory for header files? (E.G. *.h & *.hpp)
